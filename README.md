@@ -1,78 +1,50 @@
-# PtaxDollar
+# Dólar PTAX — Simulador React
 
-App iOS simples em SwiftUI para consultar a cotação oficial do dólar PTAX usando a API pública do Banco Central do Brasil.
+Simulador web da tela simples do app iPhone para consulta da cotação do dólar PTAX.
 
-## Funcionalidades do MVP
+Esta versão foi feita para ser fácil de subir no GitHub e executar localmente com Vite.
 
-- Consulta USD/BRL por data
-- Exibe cotação de compra e venda
-- Busca automaticamente a última cotação disponível anterior quando a data escolhida não tem PTAX
-- Cache local da última cotação consultada
-- Sem login
-- Sem backend próprio
+## O que inclui
 
-## Requisitos
+- Tela simples de consulta USD/BRL
+- Busca retroativa de até 10 dias
+- Dados simulados para funcionar offline
+- Opção de tentar consultar a API real do Banco Central
+- Testes básicos visíveis na própria tela
+- Sem `lucide-react`
+- Sem `framer-motion`
+- Sem `shadcn/ui`
 
-- macOS com Xcode instalado
-- iOS 17 ou superior recomendado
-- iPhone físico ou simulador
-- Apple ID configurado no Xcode para rodar em dispositivo físico
+## Como executar
 
-## Como abrir no Xcode
+```bash
+npm install
+npm run dev
+```
 
-1. Descompacte este projeto.
-2. Abra `PtaxDollar.xcodeproj`.
-3. Selecione um simulador ou iPhone físico.
-4. Clique em **Run** ou pressione `Cmd + R`.
+Depois abra a URL exibida pelo Vite, normalmente:
 
-## Observação importante
+```text
+http://localhost:5173
+```
 
-Este projeto inclui um arquivo `.xcodeproj` básico. Caso o Xcode não abra corretamente por diferenças de versão, crie um projeto novo no Xcode com:
+## Como testar
 
-- iOS > App
-- Product Name: `PtaxDollar`
-- Interface: `SwiftUI`
-- Language: `Swift`
+1. Abra o app.
+2. Use a data `2026-05-10`.
+3. Clique em **Consultar PTAX**.
+4. O app deve buscar datas anteriores e encontrar a cotação simulada de `2026-05-08`.
 
-Depois copie a pasta `PtaxDollar` deste repositório para dentro do novo projeto.
+## Consulta real ao Banco Central
 
-## Fonte dos dados
-
-API pública PTAX/OData do Banco Central do Brasil:
+Marque **Tentar API real do Banco Central** para consultar:
 
 ```text
 https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/
 ```
 
-Endpoint usado no MVP:
+Em alguns ambientes web a chamada pode falhar por política de rede/CORS. Nesse caso, o app cai para os dados simulados.
 
-```text
-CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='MM-dd-yyyy'&$format=json
-```
+## Próximo passo para iPhone
 
-## Estrutura
-
-```text
-PtaxDollar/
-  PtaxDollarApp.swift
-  Models/
-    ExchangeRateQuote.swift
-    QuoteViewState.swift
-  Services/
-    PtaxClient.swift
-    ExchangeRateService.swift
-    QuoteCache.swift
-  ViewModels/
-    PtaxQuoteViewModel.swift
-  Views/
-    PtaxQuoteView.swift
-  Resources/
-    Assets.xcassets
-```
-
-## Próximos passos sugeridos
-
-- Adicionar testes unitários para `ExchangeRateService`
-- Adicionar histórico local
-- Adicionar suporte futuro a outras moedas usando `CotacaoMoedaDia`
-- Publicar internamente via TestFlight, se necessário
+Este projeto é um simulador web. Para app iPhone real, a mesma regra de negócio pode ser portada para SwiftUI usando `URLSession`.
