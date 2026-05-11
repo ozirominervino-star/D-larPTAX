@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B23049CA9DE9408AB3ADC098 /* PtaxDollarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA09F7DAE47B48A2A7BC0B39 /* PtaxDollarApp.swift */; };
+		C99C9D73B389486A86FF2FA0 /* ExchangeRateQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9536AA6A545E42849A2F7036 /* ExchangeRateQuote.swift */; };
+		39F35C95717B4C8BA117E6DD /* QuoteViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F02D5A0F648FAB191BA39 /* QuoteViewState.swift */; };
+		4306396DC7A347C4B54BC093 /* PtaxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CDEC7A9FA4BA3AF5E2138 /* PtaxClient.swift */; };
+		FED0CB515E2B4F10850E7BCE /* ExchangeRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2BF5B9041427C8ECF1163 /* ExchangeRateService.swift */; };
+		6CCDCE122C9240C2BDC3F2F8 /* QuoteCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDF923ED570435A949ADB2D /* QuoteCache.swift */; };
+		990FFBB99B1C4059B57F3748 /* PtaxQuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0F17DFE384B26A8BCFE32 /* PtaxQuoteViewModel.swift */; };
+		4D398672855F4A4A96A4B310 /* PtaxQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616D0177D5E4313AAB1D3AA /* PtaxQuoteView.swift */; };
+		811E6C572544407589335268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9FF3340FB44F393D0D572 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EA09F7DAE47B48A2A7BC0B39 /* PtaxDollarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PtaxDollarApp.swift; sourceTree = "<group>"; };
+		9536AA6A545E42849A2F7036 /* ExchangeRateQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateQuote.swift; sourceTree = "<group>"; };
+		002F02D5A0F648FAB191BA39 /* QuoteViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewState.swift; sourceTree = "<group>"; };
+		279CDEC7A9FA4BA3AF5E2138 /* PtaxClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PtaxClient.swift; sourceTree = "<group>"; };
+		33A2BF5B9041427C8ECF1163 /* ExchangeRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateService.swift; sourceTree = "<group>"; };
+		CBDF923ED570435A949ADB2D /* QuoteCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCache.swift; sourceTree = "<group>"; };
+		A3D0F17DFE384B26A8BCFE32 /* PtaxQuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PtaxQuoteViewModel.swift; sourceTree = "<group>"; };
+		5616D0177D5E4313AAB1D3AA /* PtaxQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PtaxQuoteView.swift; sourceTree = "<group>"; };
+		5DC9FF3340FB44F393D0D572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE70C45F97544438871323D7 /* PtaxDollar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PtaxDollar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50B98153B43B4809A9DFD43F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA4773A63DB34E1EB1EC4FE5 = {
+			isa = PBXGroup;
+			children = (
+				25E77931AB764FDDBCCA00A1 /* PtaxDollar */,
+				F3943B10AC9A48CC85FBD07D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3943B10AC9A48CC85FBD07D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE70C45F97544438871323D7 /* PtaxDollar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25E77931AB764FDDBCCA00A1 /* PtaxDollar */ = {
+			isa = PBXGroup;
+			children = (
+				EA09F7DAE47B48A2A7BC0B39 /* PtaxDollarApp.swift */,
+				F802E52BCB6B4F208B20466C /* Models */,
+				3304647F64A64F7997561CCD /* Services */,
+				F1E6CB22004E4450B4C22C67 /* ViewModels */,
+				7F8C0F6985B14C7BB5032EB4 /* Views */,
+				2EE03417C8464C4CA14F2B2C /* Resources */,
+			);
+			path = PtaxDollar;
+			sourceTree = "<group>";
+		};
+		F802E52BCB6B4F208B20466C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9536AA6A545E42849A2F7036 /* ExchangeRateQuote.swift */,
+				002F02D5A0F648FAB191BA39 /* QuoteViewState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3304647F64A64F7997561CCD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				279CDEC7A9FA4BA3AF5E2138 /* PtaxClient.swift */,
+				33A2BF5B9041427C8ECF1163 /* ExchangeRateService.swift */,
+				CBDF923ED570435A949ADB2D /* QuoteCache.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F1E6CB22004E4450B4C22C67 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A3D0F17DFE384B26A8BCFE32 /* PtaxQuoteViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7F8C0F6985B14C7BB5032EB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5616D0177D5E4313AAB1D3AA /* PtaxQuoteView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2EE03417C8464C4CA14F2B2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5DC9FF3340FB44F393D0D572 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E16B92687EE94BE3A8FCC8A4 /* PtaxDollar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD6FFDBC57E441B1961725EB /* Build configuration list for PBXNativeTarget "PtaxDollar" */;
+			buildPhases = (
+				BBACE8E427D54CEC880C2A57 /* Sources */,
+				50B98153B43B4809A9DFD43F /* Frameworks */,
+				4842B30365A04ECEA48111F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PtaxDollar;
+			productName = PtaxDollar;
+			productReference = FE70C45F97544438871323D7 /* PtaxDollar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59EEC0D38A5D40D3B7A78958 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					E16B92687EE94BE3A8FCC8A4 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 927723C986A64117BD52244E /* Build configuration list for PBXProject "PtaxDollar" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA4773A63DB34E1EB1EC4FE5;
+			productRefGroup = F3943B10AC9A48CC85FBD07D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E16B92687EE94BE3A8FCC8A4 /* PtaxDollar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4842B30365A04ECEA48111F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				811E6C572544407589335268 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBACE8E427D54CEC880C2A57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B23049CA9DE9408AB3ADC098 /* PtaxDollarApp.swift in Sources */,
+				C99C9D73B389486A86FF2FA0 /* ExchangeRateQuote.swift in Sources */,
+				39F35C95717B4C8BA117E6DD /* QuoteViewState.swift in Sources */,
+				4306396DC7A347C4B54BC093 /* PtaxClient.swift in Sources */,
+				FED0CB515E2B4F10850E7BCE /* ExchangeRateService.swift in Sources */,
+				6CCDCE122C9240C2BDC3F2F8 /* QuoteCache.swift in Sources */,
+				990FFBB99B1C4059B57F3748 /* PtaxQuoteViewModel.swift in Sources */,
+				4D398672855F4A4A96A4B310 /* PtaxQuoteView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		19B716A30C6D457CB8BB0021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9EEC6D81B70F42FC83004DF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19B716A30C6D457CB8BB0021T /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Dólar PTAX";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PtaxDollar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Debug;
+		};
+		9EEC6D81B70F42FC83004DF7T /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Dólar PTAX";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PtaxDollar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		927723C986A64117BD52244E /* Build configuration list for PBXProject "PtaxDollar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B716A30C6D457CB8BB0021 /* Debug */,
+				9EEC6D81B70F42FC83004DF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD6FFDBC57E441B1961725EB /* Build configuration list for PBXNativeTarget "PtaxDollar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B716A30C6D457CB8BB0021T /* Debug */,
+				9EEC6D81B70F42FC83004DF7T /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59EEC0D38A5D40D3B7A78958 /* Project object */;
+}
